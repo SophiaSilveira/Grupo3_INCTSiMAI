@@ -38,7 +38,7 @@ Neste âmbito, decidimos desenvolver uma análise de dados capaz de responder ao
 ### Cotas de Inundação Prefeitura de Porto Alegre
   #### Extração
   - link: https://gis-smamus.portoalegre.rs.gov.br/server/rest/services/01_PUBLICACOES/cotas_inundacao_300_535/FeatureServer/0
-  - Consumo: API -> padrão ArcGIS REST -> dados geográficos por requisições HTTP
+  - Consumo: API pelo padrão ArcGIS REST onde recebemos dados geográficos por requisições HTTP
     
 #### Features
   | Campo | Descrição | Tipo |
