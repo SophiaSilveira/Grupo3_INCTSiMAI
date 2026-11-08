@@ -1,0 +1,77 @@
+﻿type,category,severity,neighborhood,level_m,field,value,expected,description
+isolated_high_value,behavior,error,Espírito Santo,4.7,affected_buildings,2101.0,47.0,much higher than the previous (46) and the next (47) level
+value_decreased,behavior,error,Arquipélago,3.1,affected_buildings,4680.0,4685.0,dropped from 4685 at 3 m (should not decrease)
+value_decreased,behavior,error,Arquipélago,3.6,affected_buildings,4680.0,4685.0,dropped from 4685 at 3.5 m (should not decrease)
+value_decreased,behavior,error,Arquipélago,4.1,affected_buildings,4674.0,4685.0,dropped from 4685 at 4 m (should not decrease)
+value_decreased,behavior,error,Arquipélago,4.6,affected_buildings,4680.0,4685.0,dropped from 4685 at 4.5 m (should not decrease)
+value_decreased,behavior,error,Arquipélago,5.1,affected_buildings,4680.0,4685.0,dropped from 4685 at 5 m (should not decrease)
+value_decreased,behavior,error,Arquipélago,5.4,affected_buildings,4680.0,4688.0,dropped from 4688 at 5.3 m (should not decrease)
+value_decreased,behavior,error,Centro Histórico,9.7,affected_buildings,0.0,2050.0,dropped from 2050 at 9.6 m (should not decrease)
+value_decreased,behavior,error,Espírito Santo,3.4,affected_buildings,633.0,637.0,dropped from 637 at 3.3 m (should not decrease)
+value_decreased,behavior,error,Espírito Santo,3.5,affected_buildings,25.0,633.0,dropped from 633 at 3.4 m (should not decrease)
+value_decreased,behavior,error,Espírito Santo,4.8,affected_buildings,47.0,2101.0,dropped from 2101 at 4.7 m (should not decrease)
+value_decreased,behavior,error,Lageado,8.1,affected_buildings,0.0,108.0,dropped from 108 at 8 m (should not decrease)
+value_decreased,behavior,error,Rubem Berta,8.8,affected_buildings,0.0,252.0,dropped from 252 at 8.7 m (should not decrease)
+zero_after_affected,behavior,error,Centro Histórico,9.7,affected_buildings,0.0,2050.0,zero after the neighborhood already had affected buildings
+zero_after_affected,behavior,error,Centro Histórico,9.8,affected_buildings,0.0,2050.0,zero after the neighborhood already had affected buildings
+zero_after_affected,behavior,error,Lageado,8.1,affected_buildings,0.0,108.0,zero after the neighborhood already had affected buildings
+zero_after_affected,behavior,error,Rubem Berta,8.8,affected_buildings,0.0,252.0,zero after the neighborhood already had affected buildings
+high_at_low_level,behavior,warning,Anchieta,3.2,percentage,87.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,3.3,percentage,90.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,3.4,percentage,96.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,3.5,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,3.6,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,3.7,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,3.8,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,3.9,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Anchieta,4.0,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.0,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.1,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.2,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.3,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.4,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.5,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.6,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.7,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.8,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,3.9,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Arquipélago,4.0,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.0,percentage,80.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.1,percentage,91.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.2,percentage,94.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.3,percentage,98.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.4,percentage,98.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.5,percentage,99.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.6,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.7,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.8,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,3.9,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Farrapos,4.0,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,3.3,percentage,53.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,3.4,percentage,67.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,3.5,percentage,84.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,3.6,percentage,88.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,3.7,percentage,91.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,3.8,percentage,94.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,3.9,percentage,95.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Humaitá,4.0,percentage,100.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Navegantes,3.7,percentage,64.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Navegantes,3.8,percentage,74.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Navegantes,3.9,percentage,79.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Navegantes,4.0,percentage,83.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,3.3,percentage,56.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,3.4,percentage,64.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,3.5,percentage,71.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,3.6,percentage,74.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,3.7,percentage,76.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,3.8,percentage,85.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,3.9,percentage,90.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,Praia de Belas,4.0,percentage,98.0,,more than 50% affected at 4 m or lower
+high_at_low_level,behavior,warning,São Geraldo,4.0,percentage,52.0,,more than 50% affected at 4 m or lower
+big_jump,behavior,info,Anchieta,3.1,affected_buildings,292.0,28.0,+44.8 points of the neighborhood's buildings in one 0.1 m step
+big_jump,behavior,info,Anchieta,3.2,affected_buildings,508.0,292.0,+36.7 points of the neighborhood's buildings in one 0.1 m step
+big_jump,behavior,info,Centro Histórico,9.9,affected_buildings,2130.0,0.0,+49.4 points of the neighborhood's buildings in one 0.1 m step
+big_jump,behavior,info,Espírito Santo,4.7,affected_buildings,2101.0,46.0,+61.5 points of the neighborhood's buildings in one 0.1 m step
+big_jump,behavior,info,Humaitá,3.3,affected_buildings,1091.0,341.0,+35.9 points of the neighborhood's buildings in one 0.1 m step
+big_jump,behavior,info,Serraria,4.5,affected_buildings,2451.0,1107.0,+45.8 points of the neighborhood's buildings in one 0.1 m step
+repeated_value,behavior,info,Arquipélago,5.4,affected_buildings,4680.0,,same value from 5.4 to 10 m (47 levels in a row)
