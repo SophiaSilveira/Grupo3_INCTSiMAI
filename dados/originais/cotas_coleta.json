@@ -1,0 +1,131 @@
+{
+ "source": "Prefeitura de Porto Alegre (SMAMUS)",
+ "url": "https://gis-smamus.portoalegre.rs.gov.br/server/rest/services/01_PUBLICACOES/cotas_inundacao_300_535/FeatureServer/0",
+ "files": {
+  "objectid_1.geojson": {
+   "objectid": 1,
+   "contourmax": 300.0,
+   "collected_at": "2026-11-09T22:33:48+00:00"
+  },
+  "objectid_2.geojson": {
+   "objectid": 2,
+   "contourmax": 310.0,
+   "collected_at": "2026-11-09T22:33:59+00:00"
+  },
+  "objectid_3.geojson": {
+   "objectid": 3,
+   "contourmax": 320.0,
+   "collected_at": "2026-11-09T22:34:09+00:00"
+  },
+  "objectid_4.geojson": {
+   "objectid": 4,
+   "contourmax": 330.0,
+   "collected_at": "2026-11-09T22:34:19+00:00"
+  },
+  "objectid_5.geojson": {
+   "objectid": 5,
+   "contourmax": 340.0,
+   "collected_at": "2026-11-09T22:34:28+00:00"
+  },
+  "objectid_6.geojson": {
+   "objectid": 6,
+   "contourmax": 350.0,
+   "collected_at": "2026-11-09T22:34:38+00:00"
+  },
+  "objectid_7.geojson": {
+   "objectid": 7,
+   "contourmax": 360.0,
+   "collected_at": "2026-11-09T22:34:48+00:00"
+  },
+  "objectid_8.geojson": {
+   "objectid": 8,
+   "contourmax": 370.0,
+   "collected_at": "2026-11-09T22:34:58+00:00"
+  },
+  "objectid_9.geojson": {
+   "objectid": 9,
+   "contourmax": 380.0,
+   "collected_at": "2026-11-09T22:35:08+00:00"
+  },
+  "objectid_10.geojson": {
+   "objectid": 10,
+   "contourmax": 390.0,
+   "collected_at": "2026-11-09T22:35:18+00:00"
+  },
+  "objectid_11.geojson": {
+   "objectid": 11,
+   "contourmax": 400.0,
+   "collected_at": "2026-11-09T22:35:27+00:00"
+  },
+  "objectid_12.geojson": {
+   "objectid": 12,
+   "contourmax": 410.0,
+   "collected_at": "2026-11-09T22:35:36+00:00"
+  },
+  "objectid_13.geojson": {
+   "objectid": 13,
+   "contourmax": 420.0,
+   "collected_at": "2026-11-09T22:35:45+00:00"
+  },
+  "objectid_14.geojson": {
+   "objectid": 14,
+   "contourmax": 430.0,
+   "collected_at": "2026-11-09T22:35:54+00:00"
+  },
+  "objectid_15.geojson": {
+   "objectid": 15,
+   "contourmax": 440.0,
+   "collected_at": "2026-11-09T22:36:02+00:00"
+  },
+  "objectid_16.geojson": {
+   "objectid": 16,
+   "contourmax": 450.0,
+   "collected_at": "2026-11-09T22:36:08+00:00"
+  },
+  "objectid_17.geojson": {
+   "objectid": 17,
+   "contourmax": 460.0,
+   "collected_at": "2026-11-09T22:36:15+00:00"
+  },
+  "objectid_18.geojson": {
+   "objectid": 18,
+   "contourmax": 470.0,
+   "collected_at": "2026-11-09T22:36:21+00:00"
+  },
+  "objectid_19.geojson": {
+   "objectid": 19,
+   "contourmax": 480.0,
+   "collected_at": "2026-11-09T22:36:27+00:00"
+  },
+  "objectid_20.geojson": {
+   "objectid": 20,
+   "contourmax": 490.0,
+   "collected_at": "2026-11-09T22:36:34+00:00"
+  },
+  "objectid_21.geojson": {
+   "objectid": 21,
+   "contourmax": 500.0,
+   "collected_at": "2026-11-09T22:36:40+00:00"
+  },
+  "objectid_22.geojson": {
+   "objectid": 22,
+   "contourmax": 510.0,
+   "collected_at": "2026-11-09T22:36:48+00:00"
+  },
+  "objectid_23.geojson": {
+   "objectid": 23,
+   "contourmax": 520.0,
+   "collected_at": "2026-11-09T22:36:56+00:00"
+  },
+  "objectid_24.geojson": {
+   "objectid": 24,
+   "contourmax": 530.0,
+   "collected_at": "2026-11-09T22:37:03+00:00"
+  },
+  "objectid_25.geojson": {
+   "objectid": 25,
+   "contourmax": 535.0,
+   "collected_at": "2026-11-09T22:37:10+00:00"
+  }
+ }
+}
