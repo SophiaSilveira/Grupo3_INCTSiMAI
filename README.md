@@ -49,14 +49,41 @@ Neste âmbito, decidimos desenvolver uma análise de dados capaz de responder ao
 ##### Features
 | Campo | Descrição | Tipo |
 |---|---|---|
-| `objectid` | Identificador do registro | Inteiro |
 | `contourmax` | Cota de inundação (cm) | Decimal |
 | `area_ha` | Área em hectares | Decimal |
-| `Shape__Area` | Área calculada da geometria | Decimal |
-| `Shape__Length` | Comprimento do contorno | Decimal |
 | `geometry` | Polígono geográfico | Geometria |
 
 ##### Análises
+- Área alagada (ha) em cada nível do Guaíba, de 3,00 m a 5,35 m
+- Área que passa a ser alagada a cada 10 cm a mais de nível
+
+---
+
+#### Eixos de Logradouros Prefeitura de Porto Alegre
+##### Extração
+- link: https://prefeitura.poa.br/smamus/planejamento-urbano/mapas-digitais
+- Consumo: download direto do shapefile (ZIP), sem API
+- Formato: linhas no centro de cada via, 31.416 trechos de 10.410 ruas
+- Coordenadas: SIRGAS 2000 / TM-POA, em metros
+
+##### Features
+| Campo | Descrição | Tipo |
+|---|---|---|
+| `CDLOG` | Código do logradouro | Inteiro |
+| `CDSEG` | Código do trecho | Inteiro |
+| `NMIDELOG` | Nome do logradouro | Texto |
+| `CDIDECAT` | Categoria (rua, avenida, praça...) | Texto |
+| `CDTIPO` | Situação do logradouro | Inteiro |
+| `geometry` | Linha do eixo da via | Geometria |
+
+##### Análises
+- Ruas alagadas em cada nível do Guaíba
+- Nível a partir do qual cada rua fica intransitável
+- Extensão (km) de vias alagadas por nível
+
+---
+
+### Objetivo
 - Rotas de evacuação direta das regiões afetadas para qualquer outro bairro (por nível)
 - Rotas de A até B evitando regiões afetadas (por nível)
 

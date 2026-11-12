@@ -35,6 +35,20 @@ Sugestões acumuladas durante o trabalho. Ao final, marcar o que entrou em `limp
 - [ ] Os níveis são quase aninhados, mas não perfeitamente: cerca de 2,4 ha de 3,00 m ficam fora de 3,10 m, e o mesmo ocorre de 3,10 m para 3,20 m. Usar o menor nível que alcança cada rua.
 - [ ] Partes desconectadas: em 3,00 m, 108 de 121 partes têm menos de 1 ha; em 5,35 m, 40 de 43.
 
+## Base externa: Eixos de Logradouros
+
+### Descrição e coleta
+- [ ] **Texto sugerido:** A base "Eixos de Logradouros", publicada pela Prefeitura de Porto Alegre (SMAMUS) na página Mapas Digitais, representa o sistema viário da cidade como linhas que passam pelo centro geométrico de cada via. Foi produzida pela USIG por restituição fotogramétrica do aerolevantamento de 2010, na escala 1:1000. São 31.416 segmentos de 10.410 logradouros, em shapefile, no sistema SIRGAS 2000 / TM-POA. Os dados foram obtidos por download direto do arquivo ZIP, sem API, em 11/11/2026.
+- [ ] Data dos dados: no servidor, os arquivos são de 31/05/2022, e os do ZIP são de 12/05/2022. A ficha técnica diz que a atualização é semanal, mas o arquivo publicado não é atualizado desde 2022. Ruas abertas depois disso podem faltar.
+- [ ] Uso: a ficha técnica (Metadados_Logradouros.zip) informa que não há limitações de acesso e uso. A página não publica licença.
+- [ ] Coleta responsável: o `robots.txt` permite `/sites/default/files/` (checado em 10/11/2026), e o ZIP é baixado uma vez e guardado localmente. A URL, a data, o tamanho e o SHA-256 ficam em `*.metadata.json`.
+- [ ] Os metadados documentam os campos, mas não os códigos de `CDTIPO` (situação) e `CDIDECAT` (categoria). As classes usadas na limpeza são hipóteses do grupo.
+
+### Limitações
+- [ ] Eixo não é a pista: a linha é o centro da via, então não diz a largura nem quantas faixas ficam livres.
+- [ ] Inclui itens que não são ruas (margem do Guaíba, ilhas, arroios, contornos de praças, escadarias). Eles foram classificados em `feature_class`, e não apagados.
+- [ ] Resultado da limpeza: 31.416 → 31.393 segmentos (30.494 ruas, 786 contornos de área, 98 que não são ruas e 15 de pedestres).
+
 ## Base do INCT: sugestões para a parte da Sophia
 
 Pontos encontrados ao revisar a limpeza. A decisão de usar cada um é de quem está cuidando dessa parte.
