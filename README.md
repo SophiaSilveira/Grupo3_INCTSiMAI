@@ -11,6 +11,10 @@ Nas diversas faces afetadas por este evento traumático, identificamos a dificul
 Neste âmbito, decidimos desenvolver uma análise de dados capaz de responder ao usuário quais rodovias da cidade se encontram afetadas pelo nível d'água e quais estão operantes. Por meio de um slider, o usuário pode navegar através das diferentes cotas do nível do Guaíba, visualizando no mapa as curvas de nível de inundação na cidade e quais rodovias deixam de ser trafegáveis. A ideia é que, no caso de nova tragédia, o mapa pudesse ser utilizado como referência para identificar rotas ainda válidas, seja para fuga ou transporte de mantimentos.
 
 
+> ## ARQUIVO DE BASE PARA O DASHBOARD
+> ### `dados/processados/inct_limpo.json`
+> Base do INCT já limpa, com um item por bairro (94) e vetores de 71 posições, um por nível do Guaíba. **Use este arquivo, e não o `data.json` original.** Posição de um nível no vetor: `round((nivel - 3.0) * 10)`. Para gerar de novo: `python app.py`.
+
 <details>
 <summary><b>Fase 1: Levantamento da base externa</b></summary>
 
@@ -95,9 +99,32 @@ Neste âmbito, decidimos desenvolver uma análise de dados capaz de responder ao
 ---
 
 ### Limpeza da base fornecida
-_Registro de tudo o que foi feito na base do INCT e o porquê de cada decisão._
+_Registro do que foi feito na base do INCT e o porquê de cada decisão. O detalhe de cada etapa está em [relatorios/limpeza_log.md](relatorios/limpeza_log.md)._
 
-<!-- Preencher conforme a limpeza avançar: etapa, o que foi feito, motivo da decisão. -->
+> ## ARQUIVO DE BASE PARA O DASHBOARD: `dados/processados/inct_limpo.json`
+
+**Como rodar:** `python app.py` (o `app.py` chama uma única função, `clean_inct_data`, que executa as 7 etapas).
+
+| Arquivo | Para que serve |
+|---|---|
+| `dados/originais/data.json` | Base original do INCT, nunca alterada |
+| `dados/processados/anomalies.csv` | Todas as anomalias encontradas (76 linhas) |
+| `dados/processados/corrections.csv` | Cada valor corrigido: antes, depois e motivo |
+| **`dados/processados/inct_limpo.json`** | **Base limpa, a que o dashboard deve usar** |
+
+**Etapas:** carga → normalização → detecção de anomalias → relatório → correção → revalidação → saída.
+
+**Formato do `inct_limpo.json`:** `neighborhoods → bairro → { total_buildings, population, affected_buildings[71], percentage[71], affected_population[71] }`, mais `level_min` (3.0), `level_step` (0.1) e `level_count` (71). `total_buildings` e `population` são números únicos, e os outros três campos são vetores em ordem de nível.
+
+**O que encontramos e decidimos:**
+- Estrutura completa: 94 bairros em todos os 71 níveis, sem duplicados nem vazios.
+- **Zeros no meio da série** (Centro Histórico 9,7 e 9,8 m, Lageado 8,1 m, Rubem Berta 8,8 m): trocados por interpolação entre os níveis vizinhos.
+- **Prédios afetados diminuindo quando o rio sobe** (12 casos em 5 bairros, incluindo um valor isolado de 2101 em Espírito Santo a 4,7 m): o valor foi baixado para o menor valor dos níveis seguintes. No Espírito Santo de 3,0 a 3,4 m, assumimos que os valores posteriores (25) estão certos e os 637 errados.
+- **Mantidos com aviso**, porque só dá para confirmar com a altitude do terreno: percentual alto em nível baixo, saltos grandes e valores repetidos por muitos níveis.
+- **Critério das correções:** com o rio subindo, os prédios afetados de um bairro não podem diminuir. Corrigimos em vez de descartar linhas porque o dashboard precisa da série completa de 71 níveis em cada bairro. A justificativa de cada caso está na etapa 5 do [relatorios/limpeza_log.md](relatorios/limpeza_log.md).
+- Ao todo, **24 de 6.674 linhas** foram alteradas em relação ao original.
+
+**Limitação a avisar no dashboard:** o `percentage` e o `affected_population` do arquivo original são arredondados para cima, então a população afetada fica acima do cálculo exato (em média 27 pessoas por linha, até 501). Os números são estimativas de uma simulação.
 
 ### EDA
 _A documentar._
