@@ -116,6 +116,23 @@ _Registro do que foi feito na base do INCT e o porquê de cada decisão. O detal
 
 **Formato do `inct_limpo.json`:** `neighborhoods → bairro → { total_buildings, population, affected_buildings[71], percentage[71], affected_population[71] }`, mais `level_min` (3.0), `level_step` (0.1) e `level_count` (71). `total_buildings` e `population` são números únicos, e os outros três campos são vetores em ordem de nível.
 
+**Como achar a posição de um nível no vetor:**
+- **Fórmula:** posição = (nível − 3,0) × 10, arredondada para o inteiro mais próximo.
+- **Por que × 10:** o passo é 0,1 m, então cada 0,1 m de nível é uma posição. Só subtrair 3,0 não basta (o nível 3,5 não é a posição 0,5, é a posição 5).
+- **Por que arredondar:** a conta com decimais pode dar `0.9999999999999991` em vez de `1`.
+- **Faixa:** as posições vão de 0 (nível 3,0 m) a 70 (nível 10,0 m), são 71 no total.
+
+| Nível | Posição |
+|---|---|
+| 3,0 m | 0 |
+| 3,5 m | 5 |
+| 5,3 m | 23 |
+| 10,0 m | 70 |
+
+**Dica para o slider:** se ele trabalhar em décimos de metro (de 30 a 100), a posição é simplesmente `valor − 30`, sem conta com decimais. Basta dividir por 10 para mostrar o nível.
+
+**Atenção ao nível recorde de 5,35 m:** ele não está na grade de 0,1 m. Fica entre a posição 23 (5,3 m) e a 24 (5,4 m), e precisamos decidir como marcá-lo na curva.
+
 **O que encontramos e decidimos:**
 - Estrutura completa: 94 bairros em todos os 71 níveis, sem duplicados nem vazios.
 - **Zeros no meio da série** (Centro Histórico 9,7 e 9,8 m, Lageado 8,1 m, Rubem Berta 8,8 m): trocados por interpolação entre os níveis vizinhos.

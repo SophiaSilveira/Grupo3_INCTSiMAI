@@ -54,19 +54,19 @@ Este conteúdo alimenta a seção "Limpeza da base fornecida" do README e o rela
 | | contagem diferente de 94 bairros e bairro ausente em algum nível | enunciado |
 | | registros duplicados (mesmo nível e bairro) | enunciado |
 | | valores vazios nos 5 campos | enunciado |
-| | campos que não são os 5 documentados | adição da equipe |
-| | nomes de bairro parecidos (possível mesma grafia) | adição da equipe |
+| | campos que não são os 5 documentados | adição nossa |
+| | nomes de bairro parecidos (possível mesma grafia) | adição nossa |
 | Constantes | `total_buildings` e `population` variando entre níveis | enunciado |
 | Coerência | negativos, prédios afetados acima do total, `total_buildings` igual a 0 | enunciado |
 | | `percentage` diferente de afetados ÷ total × 100 | enunciado |
 | | `affected_population` diferente de população × percentual ÷ 100 | enunciado |
 | Comportamento | prédios afetados **diminuindo** quando o nível sobe | enunciado |
-| | prédios afetados caindo para **zero** depois de já terem sido afetados (dado ausente preenchido com 0?) | adição da equipe |
-| | valor isolado muito acima do nível anterior e do seguinte (provável erro de digitação) | adição da equipe |
-| | saltos grandes, valores repetidos por muitos níveis seguidos, percentual alto em nível baixo | adição da equipe |
-| Escala | bairro muito fora do padrão, soma da população longe do total da cidade | adição da equipe |
+| | prédios afetados caindo para **zero** depois de já terem sido afetados (dado ausente preenchido com 0?) | adição nossa |
+| | valor isolado muito acima do nível anterior e do seguinte (provável erro de digitação) | adição nossa |
+| | saltos grandes, valores repetidos por muitos níveis seguidos, percentual alto em nível baixo | adição nossa |
+| Escala | bairro muito fora do padrão, soma da população longe do total da cidade | adição nossa |
 
-**Tolerância do percentual:** o arquivo guarda o `percentage` como número inteiro. Por exemplo, 28 de 589 prédios dá 4,75%, e o arquivo traz 5. Como a diferença para o cálculo exato não passou de 1 ponto, o grupo considerou que é arredondamento e não erro. Por isso o código aceita diferenças de até **1 ponto** e só marca como anomalia o que passar disso. Com uma tolerância menor (0,01), 2.620 linhas seriam marcadas à toa.
+**Tolerância do percentual:** o arquivo guarda o `percentage` como número inteiro. Por exemplo, 28 de 589 prédios dá 4,75%, e o arquivo traz 5. Como a diferença para o cálculo exato não passou de 1 ponto, consideramos que é arredondamento e não erro. Por isso o código aceita diferenças de até **1 ponto** e só marca como anomalia o que passar disso. Com uma tolerância menor (0,01), 2.620 linhas seriam marcadas à toa.
 
 **Limite dessa escolha:** erros menores que 1 ponto não aparecem como anomalia.
 
