@@ -18,10 +18,11 @@ COTAS_MANIFEST = Path("dados/originais/cotas_coleta.json")
 COTAS_OUTPUT = Path("dados/processados/cotas.parquet")
 
 STREETS_OUTPUT = Path("dados/processados/logradouros.geojson")
+ROUTES_OUTPUT = Path("dados/processados/rotas.parquet")
 
 DASHBOARD_PAGES = [
     (Path("scripts/dashboards/tela1_simulacao.py"), "Tela 1 - Simulação do INCT"),
-    (Path("scripts/dashboards/tela2_bases.py"), "Tela 2 - Bases externas"),
+    (Path("scripts/dashboards/tela2_rotas.py"), "Tela 2 - Rotas na enchente"),
 ]
 
 
@@ -47,10 +48,18 @@ def step_logradouros():
     return clean_streets(collect_streets())
 
 
+def step_rotas():
+    from scripts.normalization.rotas_prepare import prepare_routes
+
+    prepare_routes(COTAS_OUTPUT, STREETS_OUTPUT, ROUTES_OUTPUT)
+    return ROUTES_OUTPUT
+
+
 STEPS = {
     "inct": (step_inct, INCT_CLEAN),
     "cotas": (step_cotas, COTAS_OUTPUT),
     "logradouros": (step_logradouros, STREETS_OUTPUT),
+    "rotas": (step_rotas, ROUTES_OUTPUT),
 }
 
 

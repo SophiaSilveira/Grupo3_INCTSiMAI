@@ -5,3 +5,5 @@ requests
 pyarrow
 streamlit
 plotly
+networkx
+pydeck
