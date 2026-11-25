@@ -3,3 +3,5 @@ numpy
 geopandas
 requests
 pyarrow
+streamlit
+plotly
