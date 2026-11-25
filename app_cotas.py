@@ -1,7 +1,7 @@
 import logging
 
-from scripts.cotas_collect import collect_all
-from scripts.cotas_prepare import prepare_cotas
+from scripts.normalization.cotas_collect import collect_all
+from scripts.normalization.cotas_prepare import prepare_cotas
 
 RAW_DIR = "dados/originais/cotas"
 MANIFEST_PATH = "dados/originais/cotas_coleta.json"

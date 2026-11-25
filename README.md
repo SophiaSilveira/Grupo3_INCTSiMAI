@@ -99,7 +99,7 @@ Neste âmbito, decidimos desenvolver uma análise de dados capaz de responder ao
 ---
 
 ### Limpeza da base fornecida
-_Registro do que foi feito na base do INCT e o porquê de cada decisão. O detalhe de cada etapa está em [relatorios/limpeza_log.md](relatorios/limpeza_log.md)._
+_Registro do que foi feito na base do INCT e o porquê de cada decisão. O detalhe de cada etapa está em [relatorios/limpeza_dados_pdf/cleaning_INCT.md](relatorios/limpeza_dados_pdf/cleaning_INCT.md)._
 
 > ## ARQUIVO DE BASE PARA O DASHBOARD: `dados/processados/inct_limpo.json`
 
@@ -138,7 +138,7 @@ _Registro do que foi feito na base do INCT e o porquê de cada decisão. O detal
 - **Zeros no meio da série** (Centro Histórico 9,7 e 9,8 m, Lageado 8,1 m, Rubem Berta 8,8 m): trocados por interpolação entre os níveis vizinhos.
 - **Prédios afetados diminuindo quando o rio sobe** (12 casos em 5 bairros, incluindo um valor isolado de 2101 em Espírito Santo a 4,7 m): o valor foi baixado para o menor valor dos níveis seguintes. No Espírito Santo de 3,0 a 3,4 m, assumimos que os valores posteriores (25) estão certos e os 637 errados.
 - **Mantidos com aviso**, porque só dá para confirmar com a altitude do terreno: percentual alto em nível baixo, saltos grandes e valores repetidos por muitos níveis.
-- **Critério das correções:** com o rio subindo, os prédios afetados de um bairro não podem diminuir. Corrigimos em vez de descartar linhas porque o dashboard precisa da série completa de 71 níveis em cada bairro. A justificativa de cada caso está na etapa 5 do [relatorios/limpeza_log.md](relatorios/limpeza_log.md).
+- **Critério das correções:** com o rio subindo, os prédios afetados de um bairro não podem diminuir. Corrigimos em vez de descartar linhas porque o dashboard precisa da série completa de 71 níveis em cada bairro. A justificativa de cada caso está na etapa 5 do [relatorios/limpeza_dados_pdf/cleaning_INCT.md](relatorios/limpeza_dados_pdf/cleaning_INCT.md).
 - Ao todo, **24 de 6.674 linhas** foram alteradas em relação ao original.
 
 **Limitação a avisar no dashboard:** o `percentage` e o `affected_population` do arquivo original são arredondados para cima, então a população afetada fica acima do cálculo exato (em média 27 pessoas por linha, até 501). Os números são estimativas de uma simulação.
